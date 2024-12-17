@@ -15,7 +15,7 @@ def get_db_connection():
 
 @app.route('/')
 def home():
-    return "welcomeee to the flask trofim's app!"
+    return "welcomeee to the Flask'trofim app!"
 
 @app.route('/data', methods=['GET'])
 def get_table_data():
@@ -30,11 +30,11 @@ def get_table_data():
             lt.lesson_type,
             r.RoomNumber
         FROM lesson l
-        JOIN Teachers t ON l.TeacherID = t.id
-        JOIN Groups g ON l.GroupID = g.id
-        JOIN Subjects1 s ON l.SubjectID = s.id
-        LEFT JOIN Lesson_Type1 lt ON l.lesson_type = lt.id
-        JOIN Rooms r ON l.RoomID = r.id
+        JOIN teachers t ON l.TeacherID = t.id
+        JOIN groups g ON l.GroupID = g.id
+        JOIN subjects1 s ON l.SubjectID = s.id
+        LEFT JOIN lesson_types1 lt ON l.lesson_type = lt.id
+        JOIN rooms r ON l.RoomID = r.id
         WHERE t.id = @TeacherID
         ORDER BY l.day''')
     rows = cursor.fetchall()
