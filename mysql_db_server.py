@@ -19,7 +19,9 @@ def get_table_data():
     cursor = conn.cursor(dictionary=True)
     cursor.execute('''
         SELECT
-            t.FullName,
+            t.name,
+            t.surname,
+            t.patronomic,
             l.day,
             g.group_name,
             s.SubjectName,
