@@ -33,7 +33,7 @@ def get_table_data():
         JOIN teachers t ON l.TeacherID = t.id
         JOIN groups g ON l.GroupID = g.id
         JOIN subjects1 s ON l.SubjectID = s.id
-        LEFT JOIN lesson_types1 lt ON l.lesson_type = lt.id
+        LEFT JOIN lesson_type1 lt ON l.lesson_type = lt.id
         JOIN rooms r ON l.RoomID = r.id
         WHERE t.id = @TeacherID
         ORDER BY l.day''')
