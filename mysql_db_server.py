@@ -13,6 +13,10 @@ db_config = {
 def get_db_connection():
     return mysql.connector.connect(**db_config)
 
+@app.route('/')
+def home():
+    return "welcomeee to the Flask'trofim app!"
+
 @app.route('/data', methods=['GET'])
 def get_table_data():
     conn = get_db_connection()
