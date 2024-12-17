@@ -35,7 +35,7 @@ def get_table_data():
         JOIN subjects1 s ON l.SubjectID = s.id
         LEFT JOIN lesson_type1 lt ON l.lesson_type = lt.id
         JOIN rooms r ON l.RoomID = r.id
-        WHERE t.id = @TeacherID
+        WHERE t.id = 1
         ORDER BY l.day''')
     rows = cursor.fetchall()
     cursor.close()
