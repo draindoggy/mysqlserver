@@ -4,10 +4,10 @@ import mysql.connector
 app = Flask(__name__)
 
 db_config = {
-    'user': 'sql7751010',
-    'password': 'B2hrwJGke7',
+    'user': 'sql7752598',
+    'password': '4adxPLpy5I',
     'host': 'sql7.freemysqlhosting.net',
-    'database': 'sql7751010'
+    'database': 'sql7752598'
 }
 
 def get_db_connection():
