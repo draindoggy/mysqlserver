@@ -4,10 +4,10 @@ import mysql.connector
 app = Flask(__name__)
 
 db_config = {
-    'user': 'sql7752598',
-    'password': '4adxPLpy5I',
+    'user': 'sql7752654',
+    'password': 'pxDs8kF4Me',
     'host': 'sql7.freemysqlhosting.net',
-    'database': 'sql7752598'
+    'database': 'sql7752654'
 }
 
 def get_db_connection():
@@ -19,9 +19,7 @@ def get_table_data():
     cursor = conn.cursor(dictionary=True)
     cursor.execute('''
         SELECT
-            t.name,
-            t.surname,
-            t.patronomic,
+            t.FullName,
             l.day,
             g.group_name,
             s.SubjectName,
