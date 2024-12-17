@@ -29,7 +29,7 @@ def get_table_data():
             s.SubjectName,
             lt.lesson_type,
             r.RoomNumber
-        FROM Lesson l
+        FROM lesson l
         JOIN Teachers t ON l.TeacherID = t.id
         JOIN Groups g ON l.GroupID = g.id
         JOIN Subjects1 s ON l.SubjectID = s.id
